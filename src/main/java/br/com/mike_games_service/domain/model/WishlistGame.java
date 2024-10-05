@@ -14,12 +14,8 @@ import java.time.LocalDateTime;
 @Builder
 public class WishlistGame {
 
-    @Id
-    @Column(name = "game_id")
-    private Long gameId;
-
-    @Column(name = "username")
-    private String username;
+    @EmbeddedId
+    private WishlistId wishlistId;
 
     @Column(name="date")
     private LocalDateTime date;

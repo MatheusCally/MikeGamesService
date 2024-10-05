@@ -16,8 +16,12 @@ public class Answer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
-    private Long recommendation_id;
+    @Column(name = "id")
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "recommendation_id")
+    private Recommendation recommendation;
 
     @Column(name = "game_id")
     private Long gameId;

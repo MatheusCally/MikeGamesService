@@ -17,7 +17,7 @@ public class Recommendation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
-    private String recommendation_id;
+    private Long id;
 
     @Column(name = "game_id")
     private Long gameId;
